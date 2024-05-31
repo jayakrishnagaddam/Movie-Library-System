@@ -10,9 +10,16 @@
             border-color:red;
             
         }
+        .upgrade-itemd {
+            border-left: 8px solid #ccc;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            border-color:red;
+            
+        }
         body {
             background-color: black !important;
-            margin-top: 80px !important;
+            margin-top: 60px !important;
             color: white !important;
         }
         .carousel-container {
@@ -32,7 +39,8 @@
             max-width: 100%;
         }
         .card-text {
-            color: white;
+            color: wheat;
+            font-size: 16px;
             white-space: normal;
         }
         #aid {

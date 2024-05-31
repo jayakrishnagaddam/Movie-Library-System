@@ -1,8 +1,7 @@
 from flask import Flask, render_template, session, url_for, flash, redirect, request
 from flask_pymongo import PyMongo
 
-
-app=Flask(__name__)
+app = Flask(__name__)
 app.config["SECRET_KEY"] = "1234"
 app.config["MONGO_URI"] = "mongodb+srv://2100090162:manigaddam@deepsheild.kzgpo9p.mongodb.net/Movie_Library"
 mongo = PyMongo(app)
@@ -20,7 +19,7 @@ def login():
         if user_data:
             firstname = user_data['first_name']
             session['email'] = email
-            session['name']=firstname
+            session['name'] = firstname
             return redirect(url_for('home'))
         else:
             error = 'Invalid username or password'
@@ -39,22 +38,21 @@ def signup():
 
         mongo.db.users.insert_one(user_data)
 
-        flash('SIGN UP SUCCESSFUL...YOU CAN NOW LOGIN HERE...',
-              'success')  # Flash success message
+        flash('SIGN UP SUCCESSFUL...YOU CAN NOW LOGIN HERE...', 'success')  # Flash success message
         return redirect(url_for('login'))
     return render_template('signup.html')
 
 @app.route('/home')
 def home():
-    return render_template('home.html')
-
+    top_picks = mongo.db.top_10.find()
+    print(top_picks)
+    return render_template('home.html', top_picks=top_picks)
 
 @app.route('/logout')
 def logout():
-    session.pop('email', None)  
-    flash('You have been logged out', 'success') 
+    session.pop('email', None)
+    flash('You have been logged out', 'success')
     return redirect(url_for('login'))
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
