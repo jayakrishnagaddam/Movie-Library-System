@@ -26,7 +26,7 @@
         <div class="scroll-container">
             {% for movie in top_picks %}
             <div class="card card-custom lead">
-                <img class="card-img-top" src="static\take card.jpg" alt="Card image cap">
+                <img class="card-img-top" src="{{ movie.link }}">
                 <div class="card-body">
                     <h5 class="card-title" style="color: yellow;">{{ movie.movie_name }}</h5>
                     <p class="card-text">Year: {{ movie.year }}<br>
