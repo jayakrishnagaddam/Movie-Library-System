@@ -57,7 +57,8 @@ def search():
         movies = list(mongo.db.Movies.find({
             "$or": [
                 {"movie_name": {"$regex": query, "$options": "i"}},
-                {"cast": {"$regex": query, "$options": "i"}}
+                {"cast": {"$regex": query, "$options": "i"}},
+                {"year": {"$regex": query, "$options": "i"}}
             ]
         }))
         return render_template('search_results.html', movies=movies, query=query)
@@ -65,6 +66,11 @@ def search():
         flash('Please enter a search query', 'warning')
         return redirect(url_for('home'))
 
+
+@app.route('/search_results')
+def search_results():
+    avmovies=mongo.db.Movies.find()
+    return render_template('search_results.html', avmovies=avmovies)
 
 @app.route('/logout')
 def logout():

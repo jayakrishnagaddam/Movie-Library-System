@@ -1,100 +1,115 @@
 <style>
-        .upgrade-item {
-            border-left: 4px solid #ccc;
-            border-top-left-radius: 2px;
-            border-bottom-left-radius: 2px;
-            border-color: yellow;
-        }
-        .upgrade-items {
-            border-left: 10px solid #ccc;
-            border-color:red;
-            
-        }
-        .upgrade-itemd {
-            border-left: 8px solid #ccc;
-            border-top-left-radius: 6px;
-            border-bottom-left-radius: 6px;
-            border-color:red;
-            
-        }
-        .no-results {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #999;
-            margin-top: 50px;
-        }
-        .search-results-heading {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-            color: white;
-        }
-        body {
-            background-color: black !important;
-            margin-top: 60px !important;
-            color: white !important;
-        }
-        .carousel-container {
-            width: 90%;
-            margin: auto;
-            color: black !important;
-        }
-        .space-before {
-            padding-left: 15px;
-        }
-        .space-before2 {
-            padding-left: 80px;
-        }
-            .space-befores {
-                padding-left: 7px;
-            }
+    .upgrade-item {
+        border-left: 4px solid #ccc;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-color: yellow;
+    }
 
-        .card-body {
-            color: black !important;
-            background-color: black;
-            max-width: 100%;
-        }
-        .card-text {
-            color: wheat;
-            font-size: 16px;
-            white-space: normal;
-        }
-        #aid {
-            text-decoration: none;
-            color: white;
-            
-            margin-bottom: 3px;
-        }
-        .card-custom {
-            width: 18rem;
-            margin-right: 15px;
-            flex: 0 0 auto;
-            transition: transform 0.3s ease-in-out;
-        }
-        .card-custom img {
-            height: 10rem;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-        }
-        .card-custom:hover img {
-            transform: scale(1.1);
-        }
-        .card-custom .card-body {
-            background-color: black;
-        }
-        .card-custom .lead {
-            font-size: 20px;
-            color: white;
-        }
-        .scroll-container {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-            padding: 15px 0;
-        }
-        .scroll-container::-webkit-scrollbar {
-            display: none;
-        }
-   </style>
+    .upgrade-items {
+        border-left: 10px solid #ccc;
+        border-color: red;
+    }
+
+    .upgrade-itemd {
+        border-left: 8px solid #ccc;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-color: red;
+    }
+
+    .no-results {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #999;
+        margin-top: 50px;
+    }
+
+    .search-results-heading {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    body {
+        background-color: black !important;
+        margin-top: 60px !important;
+        color: white !important;
+    }
+
+    .carousel-container {
+        width: 90%;
+        margin: auto;
+        color: black !important;
+    }
+
+    .space-before {
+        padding-left: 15px;
+    }
+
+    .space-before2 {
+        padding-left: 80px;
+    }
+
+    .space-befores {
+        padding-left: 7px;
+    }
+
+    .card-body {
+        color: black !important;
+        background-color: black;
+        max-width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card-text {
+        color: wheat;
+        font-size: 15px;
+        white-space: normal;
+    }
+
+    #aid {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 3px;
+    }
+
+    .card-custom {
+        width: 18rem;
+        margin-right: 15px;
+        flex: 0 0 auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card-custom img {
+        height: 10rem;
+        object-fit: cover;
+    }
+
+    .card-custom:hover {
+        transform: scale(1.1);
+    }
+
+    .card-custom .card-body {
+        background-color: black;
+    }
+
+    .card-custom .lead {
+        font-size: 20px;
+        color: white;
+    }
+
+    .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding: 15px 0;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+</style>
