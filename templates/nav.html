@@ -9,10 +9,17 @@
         .navbar-custom {
             background-color: rgb(0, 0, 0); 
         }
+        .space-before{
+            padding-left: 5%;
+        }
         #li{
             font-size: 14px;
             text-decoration: none;
             list-style-type: none;
+        }
+        .search-bar {
+            flex-grow: 1; /* Make the search bar grow to fill available space */
+            max-width: 900px; /* Set a maximum width to prevent it from being too large on very wide screens */
         }
         
     </style>
@@ -20,10 +27,15 @@
 
 </head>
 <body class="lead">
-    <nav class="navbar fixed-top navbar-expand-sm">
+    <nav class="navbar fixed-top navbar-expand-sm ">
         <div class="container-fluid">
             <a class="navbar-brand text-center" style="color: white;"><b>Movie-Pro</b></a>
-        
+            <form id="fid" class="d-flex search-bar space-before" action="{{ url_for('search') }}" method="GET">
+                <input name="query" class="form-control me-2" type="search" placeholder="Search Movie-Pro" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+            
+         
             <div class="row">
                 <div class="col">
                     <li id="li" class="lead" >Watchlist</li>

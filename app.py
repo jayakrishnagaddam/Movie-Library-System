@@ -48,6 +48,18 @@ def home():
     print(top_picks)
     return render_template('home.html', top_picks=top_picks)
 
+@app.route('/search', methods=['GET'])
+def search():
+    query = request.args.get('query')
+    if query:
+        # Search for movies matching the query in the 'Movies' collection
+        movies = list(mongo.db.Movies.find({"movie_name": {"$regex": query, "$options": "i"}}))
+        return render_template('search_results.html', movies=movies, query=query)
+    else:
+        flash('Please enter a search query', 'warning')
+        return redirect(url_for('home'))
+
+
 @app.route('/logout')
 def logout():
     session.pop('email', None)

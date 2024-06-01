@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    {% include 'bootstrap.html' %}
+    {%include 'style.css'%}
+</head>
+<body class="lead">
+    <div class="container">
+        <h2 class="search-results-heading">Movie Results for "{{ query }}"</h2>
+        {% if movies %}
+        <div class="scroll-container">
+            {% for movie in movies %}
+            <div class="card card-custom lead">
+                <img class="card-img-top" src="{{ movie.link }}">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: yellow;">{{ movie.movie_name }}</h5>
+                    <p class="card-text">Year: {{ movie.year }}<br>
+                        Genre: {{ movie.genre }}<br>
+                        Cast: {{ movie.cast }}<br>
+                        Rating: {{ movie.Rating }}</p>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-warning">Add to watchlist</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+            <p class="no-results">No Results</p>
+        {% endif %}
+    </div>
+</body>
+</html>
