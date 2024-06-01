@@ -46,6 +46,10 @@
         .space-before2 {
             padding-left: 80px;
         }
+            .space-befores {
+                padding-left: 7px;
+            }
+
         .card-body {
             color: black !important;
             background-color: black;
