@@ -9,38 +9,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     {% include 'bootstrap.html' %}
     {% include 'nav.html' %}
-    {%include 'style.css'%}
+    {% include 'style.css' %}
 </head>
 <body class="container">
-    {%include 'corousel.html'%}
+    {% include 'corousel.html' %}
     <div class="container">
-       {%include 'faetured.html'%}
-       <div>
-        <h2 class="upgrade-itemd space-before lead mt-4 mb-4" style="color: yellow; font-size: 32px;">
-            <b> What to watch </b>
-        </h2>
-        <div class="upgrade-item">
-            <a class="space-before" style="font-size: 24px; color: white; text-decoration: none;" href="#">Top picks ></a>
-        </div>
-        <p class="mt-3" style="font-size: 16px; color: bisque;">TV shows and movies just for you</p>
-        <div class="scroll-container">
-            {% for movie in top_picks %}
-            <div class="card card-custom lead">
-                <img class="card-img-top" src="{{ movie.link }}">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: yellow;">{{ movie.movie_name }}</h5>
-                    <p class="card-text">Year: {{ movie.year }}<br>
-                        Genre: {{ movie.genre }}<br>
-                        Cast: {{ movie.cast }}<br>
-                        Rating: {{ movie.Rating }}</p>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-warning">Add to watchlist</a>
-                    </div>
-                </div>
+        {% include 'faetured.html' %}
+        <div>
+            <h2 class="upgrade-item space-before lead mt-4 mb-4" style="color: yellow; font-size: 32px;">
+                <b> What to watch </b>
+            </h2>
+            <div class="upgrade-item">
+                <a class="space-before" style="font-size: 24px; color: white; text-decoration: none;" href="#">Top picks ></a>
             </div>
-            {% endfor %}
+            <p class="mt-3" style="font-size: 16px; color: bisque;">TV shows and movies just for you</p>
+            {%include 'toppicks.html'%}
         </div>
-    </div>
 
         <div>
             <h2 class="lead mt-4 mb-2" style="color: yellow;">
@@ -48,7 +32,7 @@
                     <a class="space-before" style="font-size: 24px; color: white; text-decoration: none;" href="#">From your watchlist ></a>
                 </div>
             </h2>
-            <div class="upgrade-items container mt-4 row  text-white p-4 rounded-lg shadow mb-3">
+            <div class="upgrade-items container mt-4 row text-white p-4 rounded-lg shadow mb-3">
                 <h2 class="mt-4 text-center lead">Your watchlist is empty</h2>
                 <h2 class="mt-1 mb-4 text-center lead">Save shows and movies to keep track of what you want to watch.</h2>
                 <div class="text-center">
@@ -62,15 +46,15 @@
                     <a class="space-before" style="font-size: 24px; color: white; text-decoration: none;" href="#">This week's top 10 ></a>
                 </div>
             </h2>
-            {%include 'top 10.html'%}
+            {% include 'top 10.html' %}
+        </div>
+        {% include 'moretowatch.html' %}
     </div>
-   {%include 'moretowatch.html'%}
-    
     
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    {%include 'footer.html'%}
+    {% include 'footer.html' %}
 </body>
 </html>

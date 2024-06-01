@@ -44,16 +44,20 @@ def signup():
 
 @app.route('/home')
 def home():
-    top_picks = mongo.db.top_10.find()
-    print(top_picks)
-    return render_template('home.html', top_picks=top_picks)
+    top_picks = mongo.db.Movies.find({"Rating": {"$gt": "8"}})
+    ultratop=mongo.db.Movies.find({"Rating": {"$gt": "9"}})
+    
+    return render_template('home.html', top_picks=top_picks, ultratop=ultratop)
 
 @app.route('/search', methods=['GET'])
 def search():
     query = request.args.get('query')
     if query:
-        # Search for movies matching the query in the 'Movies' collection
-        movies = list(mongo.db.Movies.find({"movie_name": {"$regex": query, "$options": "i"}}))
+        # Search for movies matching the query in the 'Movies' collection and filter by rating > 8
+        movies = list(mongo.db.Movies.find({
+            "movie_name": {"$regex": query, "$options": "i"},
+            "Rating": {"$gt": "8"}  # Assuming ratings are stored as strings; otherwise use 8.0 if they are numbers
+        }))
         return render_template('search_results.html', movies=movies, query=query)
     else:
         flash('Please enter a search query', 'warning')

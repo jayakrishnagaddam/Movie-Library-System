@@ -1,117 +1,21 @@
-<div class="scroll-container">
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    <div class="card card-custom">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-warning">Add to watchlist</a>
-            </div>
-            
-        </div>
-    </div>
-    
-    
-</div>
 
+    <div class="scroll-container">
+        {% for movie in ultratop %}
+        <div class="card card-custom lead">
+            <img class="card-img-top" src="{{ movie.link }}" alt="Movie image">
+            <div class="card-body">
+                <h5 class="card-title" style="color: yellow;">{{ movie.movie_name }}</h5>
+                <p class="card-text">
+                    Year: {{ movie.year }}<br>
+                    Genre: {{ movie.genre }}<br>
+                    Cast: {{ movie.cast }}<br>
+                    Rating: {{ movie.Rating }}
+                </p>
+                <div class="text-center">
+                    <a href="#" class="btn btn-warning">Add to watchlist</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-</div>
