@@ -25,7 +25,6 @@
             <p class="mt-3" style="font-size: 16px; color: bisque;">TV shows and movies just for you</p>
             {%include 'toppicks.html'%}
         </div>
-
         <div>
             <h2 class="lead mt-4 mb-2" style="color: yellow;">
                 <div class="upgrade-item">
@@ -42,21 +41,35 @@
             </div>
             </div>
         </div>
-        <div>
-            <h2 class="lead mt-4 mb-2" style="color: yellow;">
-                <div class="upgrade-item">
-                    <a class="space-before" style="font-size: 24px; color: white; text-decoration: none;" href="#">This week's top 10 ></a>
-                </div>
-            </h2>
-            {% include 'top 10.html' %}
+       
+<div>
+    <h2 class="lead mt-4 mb-2" style="color: yellow;">
+        <div class="upgrade-item">
+            <a class="space-before" style="font-size: 24px; color: white; text-decoration: none;" href="#">This week's top 10 ></a>
         </div>
+    </h2>
+    <div class="scroll-container">
+        {% for movie in ultratop %}
+        <div class="card card-custom lead">
+            <img class="card-img-top" src="https://media.istockphoto.com/id/1372681569/photo/hands-holding-a-film-slate-directing-a-movie-scene.jpg?s=612x612&w=0&k=20&c=9BdhPvpFLgmzGF44AUwZUKaQW4Q3tclAUcE3Zvac8IY=" alt="Movie image">
+            <div class="card-body">
+                <h5 class="card-title" style="color: yellow;">{{ movie.movie_name }}</h5>
+                <p class="card-text">
+                    Year: {{ movie.year }}<br>
+                    Genre: {{ movie.genre }}<br>
+                    Cast: {{ movie.cast }}<br>
+                    Rating: {{ movie.Rating }}
+                </p>
+                <div class="text-center">
+                    <button class="btn btn-warning add-to-watchlist">Add to watchlist</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
         {% include 'moretowatch.html' %}
     </div>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     {% include 'footer.html' %}
 </body>
 </html>
