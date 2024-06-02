@@ -10,7 +10,14 @@ client = MongoClient(uri)
 db = client.Movie_Library
 collection = db.Movies
 
-# Delete documents without the "year" field
-deleted_docs = collection.delete_many({"year": {"$exists": False}})
+# Define the filter to match documents where the Cast field contains "Christian Bale"
+filter_criteria = {"cast": {"$regex": ".*Hrithik Roshan*"}}
 
-print(f"{deleted_docs.deleted_count} documents without the 'year' field have been deleted.")
+# Define the update operation to set the Link field
+update_operation = {"$set": {"link": "https://img.indiaforums.com/media/640x0/49/6405-hrithik-roshan.jpg"}}
+
+# Update the documents matching the filter criteria
+result = collection.update_many(filter_criteria, update_operation)
+
+# Output the number of documents updated
+print("Number of documents updated:", result.modified_count)

@@ -62,9 +62,20 @@
                         <h2 class="mt-1 mb-4 text-center lead">Save shows and movies to keep track of what you want to watch.</h2>
                         <div class="text-center">
                             <a class="btn btn-warning text-center" href="#search">+ Add movies +</a>
+                        <div class="text-center lead">
+              {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <ul class="flash">
+                          {% for message in messages %}
+                            <li>{{ message }}</li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
                         </div>
                     </div>
                 {% endif %}
+                </div>
             </div>
             
 

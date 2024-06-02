@@ -86,7 +86,7 @@ def submit_movie():
             mongo.db.Watchlist.insert_one({'movie_name': movie_name, 'email': user_email})
             flash('Movie submitted successfully!', 'success')
     else:
-        flash('Movie submission failed.', 'danger')
+        flash('Movie submission failed. Please Login!', 'danger')
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
