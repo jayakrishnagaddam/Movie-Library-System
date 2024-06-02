@@ -1,7 +1,7 @@
 # Movie-Library-System
 A secured Movie Library System to search and know about different movies by their categories and genres.
 
-Specialies :
+Specialities :
 
 1.Search through numerous number of movies, Artists and years
 2.Add to Watchlist Facility and listing capabilities.
