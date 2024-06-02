@@ -52,6 +52,26 @@ def home():
         watchlist = list(mongo.db.Watchlist.find({"email": session['email']}))
     return render_template('home.html', top_picks=top_picks, ultratop=ultratop, watchlist=watchlist, allmovies=allmovies)
 
+
+@app.route('/tollywood')
+def tollywood():
+    tmovies=mongo.db.Movies.find()
+    return render_template('tollywood.html',tmovies=tmovies)
+
+
+@app.route('/hollywood')
+def hollywood():
+    return render_template('hollywood.html')
+
+
+@app.route('/bollywood')
+def bollywood():
+    return render_template('bollywood.html')
+
+
+@app.route('/kollywood')
+def kollywood():
+    return render_template('kollywood.html')
 @app.route('/search', methods=['GET'])
 def search():
     query = request.args.get('query')

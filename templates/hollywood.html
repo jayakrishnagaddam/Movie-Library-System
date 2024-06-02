@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Hollywood Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles here */
+    </style>
+    {% include 'bootstrap.html' %}
+    {% include 'style.css' %}
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% set hmovies = [
+                {
+                    "name": "The Shawshank Redemption",
+                    "year": 1994,
+                    "cast": "Tim Robbins, Morgan Freeman",
+                    "genre": "Drama",
+                    "rating": 9.3,
+                    "link": "https://www.example.com/shawshank.jpg"
+                },
+                {
+                    "name": "The Godfather",
+                    "year": 1972,
+                    "cast": "Marlon Brando, Al Pacino, James Caan",
+                    "genre": "Crime, Drama",
+                    "rating": 9.2,
+                    "link": "https://www.example.com/godfather.jpg"
+                },
+                {
+                    "name": "The Dark Knight",
+                    "year": 2008,
+                    "cast": "Christian Bale, Heath Ledger, Aaron Eckhart",
+                    "genre": "Action, Crime, Drama",
+                    "rating": 9.0,
+                    "link": "https://www.example.com/darkknight.jpg"
+                },
+                {
+                    "name": "Schindler's List",
+                    "year": 1993,
+                    "cast": "Liam Neeson, Ben Kingsley, Ralph Fiennes",
+                    "genre": "Biography, Drama, History",
+                    "rating": 8.9,
+                    "link": "https://www.example.com/schindlerslist.jpg"
+                },
+                {
+                    "name": "The Lord of the Rings: The Return of the King",
+                    "year": 2003,
+                    "cast": "Elijah Wood, Viggo Mortensen, Ian McKellen",
+                    "genre": "Action, Adventure, Drama",
+                    "rating": 8.9,
+                    "link": "https://www.example.com/returnoftheking.jpg"
+                },
+                {
+                    "name": "Forrest Gump",
+                    "year": 1994,
+                    "cast": "Tom Hanks, Robin Wright, Gary Sinise",
+                    "genre": "Drama, Romance",
+                    "rating": 8.8,
+                    "link": "https://www.example.com/forrestgump.jpg"
+                },
+                {
+                    "name": "Inception",
+                    "year": 2010,
+                    "cast": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+                    "genre": "Action, Adventure, Sci-Fi",
+                    "rating": 8.8,
+                    "link": "https://www.example.com/inception.jpg"
+                },
+                {
+                    "name": "The Matrix",
+                    "year": 1999,
+                    "cast": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+                    "genre": "Action, Sci-Fi",
+                    "rating": 8.7,
+                    "link": "https://www.example.com/matrix.jpg"
+                },
+                {
+                    "name": "Pulp Fiction",
+                    "year": 1994,
+                    "cast": "John Travolta, Uma Thurman, Samuel L. Jackson",
+                    "genre": "Crime, Drama",
+                    "rating": 8.9,
+                    "link": "https://www.example.com/pulpfiction.jpg"
+                },
+                {
+                    "name": "Fight Club",
+                    "year": 1999,
+                    "cast": "Brad Pitt, Edward Norton, Meat Loaf",
+                    "genre": "Drama",
+                    "rating": 8.8,
+                    "link": "https://www.example.com/fightclub.jpg"
+                }
+            ] %}
+            <div class="row">
+            {% for movie in hmovies %}
+            <div class="mt-4 col card card-custom lead">
+                <img class="card-img-top" src="{{ movie.link }}" alt="Movie image">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: yellow;">{{ movie.name }}</h5>
+                    <p class="card-text">
+                        Year: {{ movie.year }}<br>
+                        Genre: {{ movie.genre }}<br>
+                        Cast: {{ movie.cast }}<br>
+                        Rating: {{ movie.rating }}
+                    </p>
+                   
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

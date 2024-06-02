@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Tollywood Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles here */
+    </style>
+    {% include 'bootstrap.html' %}
+    {% include 'style.css' %}
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% set tmovies = [
+                {
+                    "name": "Baahubali: The Beginning",
+                    "year": 2015,
+                    "cast": "Prabhas, Rana Daggubati, Anushka Shetty",
+                    "genre": "Action, Drama, Fantasy",
+                    "rating": 8.1,
+                    "link": "https://example.com/baahubali1.jpg"
+                },
+                {
+                    "name": "Baahubali 2: The Conclusion",
+                    "year": 2017,
+                    "cast": "Prabhas, Rana Daggubati, Anushka Shetty",
+                    "genre": "Action, Drama, Fantasy",
+                    "rating": 8.2,
+                    "link": "https://example.com/baahubali2.jpg"
+                },
+                {
+                    "name": "Arjun Reddy",
+                    "year": 2017,
+                    "cast": "Vijay Deverakonda, Shalini Pandey",
+                    "genre": "Drama, Romance",
+                    "rating": 8.2,
+                    "link": "https://example.com/arjunreddy.jpg"
+                },
+                {
+                    "name": "Jersey",
+                    "year": 2019,
+                    "cast": "Nani, Shraddha Srinath",
+                    "genre": "Drama, Sport",
+                    "rating": 8.5,
+                    "link": "https://example.com/jersey.jpg"
+                },
+                {
+                    "name": "Manam",
+                    "year": 2014,
+                    "cast": "Akkineni Nageswara Rao, Nagarjuna Akkineni, Naga Chaitanya Akkineni",
+                    "genre": "Comedy, Drama, Fantasy",
+                    "rating": 8.1,
+                    "link": "https://example.com/manam.jpg"
+                },
+                {
+                    "name": "Rangasthalam",
+                    "year": 2018,
+                    "cast": "Ram Charan, Samantha Akkineni",
+                    "genre": "Action, Drama",
+                    "rating": 8.4,
+                    "link": "https://example.com/rangasthalam.jpg"
+                },
+                {
+                    "name": "Maharshi",
+                    "year": 2019,
+                    "cast": "Mahesh Babu, Pooja Hegde, Allari Naresh",
+                    "genre": "Action, Drama",
+                    "rating": 7.3,
+                    "link": "https://example.com/maharshi.jpg"
+                },
+                {
+                    "name": "Nuvvu Nenu",
+                    "year": 2001,
+                    "cast": "Uday Kiran, Anita, Sunil",
+                    "genre": "Romance",
+                    "rating": 7.5,
+                    "link": "https://example.com/nuvvunenu.jpg"
+                },
+                {
+                    "name": "Eega",
+                    "year": 2012,
+                    "cast": "Nani, Samantha Ruth Prabhu, Sudeep",
+                    "genre": "Action, Fantasy",
+                    "rating": 7.8,
+                    "link": "https://example.com/eega.jpg"
+                },
+                {
+                    "name": "Athadu",
+                    "year": 2005,
+                    "cast": "Mahesh Babu, Trisha Krishnan, Prakash Raj",
+                    "genre": "Action, Comedy, Crime",
+                    "rating": 8.3,
+                    "link": "https://example.com/athadu.jpg"
+                },
+                {
+                    "name": "RRR",
+                    "year": 2022,
+                    "cast": "N. T. Rama Rao Jr., Ram Charan, Alia Bhatt, Ajay Devgn, Olivia Morris",
+                    "genre": "Action, Drama",
+                    "rating": 9.0,
+                    "link": "https://example.com/rrr.jpg"
+                }
+            ] %}
+            <div class="row">
+            {% for movie in tmovies %}
+            <div class="mt-4 col card card-custom lead">
+                <img class="card-img-top" src="https://www.beyoung.in/beyoungistan/wp-content/uploads/2023/06/Header.jpg" alt="Movie image">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: yellow;">{{ movie.name }}</h5>
+                    <p class="card-text">
+                        Year: {{ movie.year }}<br>
+                        Genre: {{ movie.genre }}<br>
+                        Cast: {{ movie.cast }}<br>
+                        Rating: {{ movie.rating }}
+                    </p>
+                   
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

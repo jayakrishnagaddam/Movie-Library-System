@@ -5,14 +5,17 @@
             <div class="row">
                 <div class="col mt-3">
                     <div class="card card-custom">
-                        <img class="card-img-top" src="static\ollywood.jpg" alt="Hollywood">
+                        <a href="{{ url_for('hollywood') }}" class="text-decoration-none">
+                        <img  class="card-img-top" src="static\ollywood.jpg" alt="Hollywood">
                         <div class="card-body">
                             <p class="lead text-center">Hollywood</p>
                             <p class="lead" >Top 10 Hollywood movies of all time</p>
                         </div>
                     </div>
+                </a>
                 </div>
                 <div class="col mt-3">
+                    <a href="{{ url_for('bollywood') }}" class="text-decoration-none">
                     <div class="card card-custom">
                         <img class="card-img-top" src="static\Bollywood.jpg" alt="Bollywood">
                         <div class="card-body">
@@ -20,18 +23,23 @@
                             <p class="lead" >Top 10 Bollywood movies of all time</p>
                         </div>
                     </div>
+                </a>
                 </div>
                 <div class="col mt-3">
-                    <div class="card card-custom">
-                        <img class="card-img-top" src="static/tollywood.jpg" alt="Tollywood">
-                        <div class="card-body">
-                            <p class="lead text-center">Tollywood</p>
-                            <p class="lead" >Top 10 Tollywood movies of all time</p>
+                    <a href="{{ url_for('tollywood') }}" class="text-decoration-none">
+                        <div class="card card-custom">
+                            <img class="card-img-top" src="static/tollywood.jpg" alt="Tollywood">
+                            <div class="card-body">
+                                <p class="lead text-center">Tollywood</p>
+                                <p class="lead">Top 10 Tollywood movies of all time</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
+                
                 <div class="col mt-3">
                     <div class="card card-custom">
+                        <a href="{{ url_for('kollywood') }}" class="text-decoration-none">
                         <img class="card-img-top" src="static/3-Pariyerum-Perumal.jpg" alt="Kollywood">
                         <div class="card-body">
                             <p class="lead text-center">Kollywood</p>
@@ -40,4 +48,5 @@
                     </div>
                 </div>
             </div>
+        </a>
         </div>

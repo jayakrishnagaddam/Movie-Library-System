@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Bollywood Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles here */
+    </style>
+    {% include 'bootstrap.html' %}
+    {% include 'style.css' %}
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% set bmovies = [
+                {
+                    "name": "3 Idiots",
+                    "year": 2009,
+                    "cast": "Aamir Khan, Kareena Kapoor, R. Madhavan, Sharman Joshi",
+                    "genre": "Comedy, Drama",
+                    "rating": 8.4,
+                    "link": "https://www.example.com/3idiots.jpg"
+                },
+                {
+                    "name": "Dilwale Dulhania Le Jayenge",
+                    "year": 1995,
+                    "cast": "Shah Rukh Khan, Kajol, Amrish Puri",
+                    "genre": "Romance, Drama",
+                    "rating": 8.1,
+                    "link": "https://www.example.com/ddlj.jpg"
+                },
+                {
+                    "name": "Sholay",
+                    "year": 1975,
+                    "cast": "Dharmendra, Amitabh Bachchan, Hema Malini, Jaya Bachchan",
+                    "genre": "Action, Adventure, Comedy",
+                    "rating": 8.2,
+                    "link": "https://www.example.com/sholay.jpg"
+                },
+                {
+                    "name": "Lagaan",
+                    "year": 2001,
+                    "cast": "Aamir Khan, Gracy Singh, Rachel Shelley",
+                    "genre": "Drama, Musical, Sport",
+                    "rating": 8.1,
+                    "link": "https://www.example.com/lagaan.jpg"
+                },
+                {
+                    "name": "Andaz Apna Apna",
+                    "year": 1994,
+                    "cast": "Aamir Khan, Salman Khan, Raveena Tandon, Karisma Kapoor",
+                    "genre": "Comedy, Family, Romance",
+                    "rating": 8.2,
+                    "link": "https://www.example.com/andazapnaapna.jpg"
+                },
+                {
+                    "name": "Golmaal: Fun Unlimited",
+                    "year": 2006,
+                    "cast": "Ajay Devgn, Arshad Warsi, Sharman Joshi, Tusshar Kapoor",
+                    "genre": "Comedy",
+                    "rating": 7.4,
+                    "link": "https://www.example.com/golmaal.jpg"
+                },
+                {
+                    "name": "Dil Chahta Hai",
+                    "year": 2001,
+                    "cast": "Aamir Khan, Saif Ali Khan, Akshaye Khanna, Preity Zinta",
+                    "genre": "Comedy, Drama, Romance",
+                    "rating": 8.1,
+                    "link": "https://www.example.com/dilchahtahai.jpg"
+                },
+                {
+                    "name": "Mughal-E-Azam",
+                    "year": 1960,
+                    "cast": "Prithviraj Kapoor, Madhubala, Dilip Kumar",
+                    "genre": "Drama, Romance",
+                    "rating": 8.2,
+                    "link": "https://www.example.com/mughaleazam.jpg"
+                },
+                {
+                    "name": "Gully Boy",
+                    "year": 2019,
+                    "cast": "Ranveer Singh, Alia Bhatt, Siddhant Chaturvedi",
+                    "genre": "Drama, Music",
+                    "rating": 8.1,
+                    "link": "https://www.example.com/gullyboy.jpg"
+                },
+                {
+                    "name": "Queen",
+                    "year": 2013,
+                    "cast": "Kangana Ranaut, Rajkummar Rao",
+                    "genre": "Comedy, Drama",
+                    "rating": 8.2,
+                    "link": "https://www.example.com/queen.jpg"
+                }
+            ] %}
+            <div class="row">
+            {% for movie in bmovies %}
+            <div class="mt-4 col card card-custom lead">
+                <img class="card-img-top" src="{{ movie.link }}" alt="Movie image">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: yellow;">{{ movie.name }}</h5>
+                    <p class="card-text">
+                        Year: {{ movie.year }}<br>
+                        Genre: {{ movie.genre }}<br>
+                        Cast: {{ movie.cast }}<br>
+                        Rating: {{ movie.rating }}
+                    </p>
+                   
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

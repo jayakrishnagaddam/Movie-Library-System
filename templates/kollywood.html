@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Kollywood Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles here */
+    </style>
+    {% include 'bootstrap.html' %}
+    {% include 'style.css' %}
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% set kmovies = [
+                {
+                    "name": "Vikram Vedha",
+                    "year": 2017,
+                    "cast": "R. Madhavan, Vijay Sethupathi, Shraddha Srinath",
+                    "genre": "Action, Crime, Drama",
+                    "rating": 8.5,
+                    "link": "https://www.example.com/vikramvedha.jpg"
+                },
+                {
+                    "name": "Kaithi",
+                    "year": 2019,
+                    "cast": "Karthi, Narain, Dheena",
+                    "genre": "Action, Thriller",
+                    "rating": 8.5,
+                    "link": "https://www.example.com/kaithi.jpg"
+                },
+                {
+                    "name": "96",
+                    "year": 2018,
+                    "cast": "Vijay Sethupathi, Trisha Krishnan",
+                    "genre": "Romance, Drama",
+                    "rating": 8.4,
+                    "link": "https://www.example.com/96.jpg"
+                },
+                {
+                    "name": "Visaranai",
+                    "year": 2015,
+                    "cast": "Dinesh, Samuthirakani, Anandhi",
+                    "genre": "Crime, Thriller",
+                    "rating": 8.5,
+                    "link": "https://www.example.com/visaranai.jpg"
+                },
+                {
+                    "name": "Aruvi",
+                    "year": 2016,
+                    "cast": "Aditi Balan, Anjali Varadhan, Lakshmi Gopalaswamy",
+                    "genre": "Drama",
+                    "rating": 8.6,
+                    "link": "https://www.example.com/aruvi.jpg"
+                },
+                {
+                    "name": "Pariyerum Perumal",
+                    "year": 2018,
+                    "cast": "Kathir, Anandhi, Yogi Babu",
+                    "genre": "Drama",
+                    "rating": 8.6,
+                    "link": "https://www.example.com/pariyerumperumal.jpg"
+                },
+                {
+                    "name": "Jigarthanda",
+                    "year": 2014,
+                    "cast": "Siddharth, Bobby Simha, Lakshmi Menon",
+                    "genre": "Action, Crime, Drama",
+                    "rating": 8.3,
+                    "link": "https://www.example.com/jigarthanda.jpg"
+                },
+                {
+                    "name": "Super Deluxe",
+                    "year": 2019,
+                    "cast": "Vijay Sethupathi, Fahadh Faasil, Samantha Akkineni",
+                    "genre": "Comedy, Crime, Drama",
+                    "rating": 8.4,
+                    "link": "https://www.example.com/superdeluxe.jpg"
+                },
+                {
+                    "name": "Vada Chennai",
+                    "year": 2018,
+                    "cast": "Dhanush, Ameer, Aishwarya Rajesh",
+                    "genre": "Action, Crime, Drama",
+                    "rating": 8.5,
+                    "link": "https://www.example.com/vadachennai.jpg"
+                },
+                {
+                    "name": "Ratsasan",
+                    "year": 2018,
+                    "cast": "Vishnu Vishal, Amala Paul",
+                    "genre": "Action, Crime, Thriller",
+                    "rating": 8.5,
+                    "link": "https://www.example.com/ratsasan.jpg"
+                }
+            ] %}
+            <div class="row">
+            {% for movie in kmovies %}
+            <div class="mt-4 col card card-custom lead">
+                <img class="card-img-top" src="{{ movie.link }}" alt="Movie image">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: yellow;">{{ movie.name }}</h5>
+                    <p class="card-text">
+                        Year: {{ movie.year }}<br>
+                        Genre: {{ movie.genre }}<br>
+                        Cast: {{ movie.cast }}<br>
+                        Rating: {{ movie.rating }}
+                    </p>
+                   
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
