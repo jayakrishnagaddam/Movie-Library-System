@@ -1,6 +1,8 @@
 # Movie-Library-System
 A secured Movie Library System to search and know about different movies by their categories and genres.
 
+Note : Website link is in the repository description...
+
 Specialities :
 
 1.Search through numerous number of movies, Artists and years
@@ -18,6 +20,8 @@ All You Need to access and run in local system are:
 2.mongoDb
 
 Thats it You can now access the entire website in your local servers.
+
+Just type python app.py in your Command Prompt.
 
 An Overview of my website : 
 
