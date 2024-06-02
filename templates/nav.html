@@ -14,6 +14,7 @@
         }
         #li{
             font-size: 14px;
+            color: yellow;
             text-decoration: none;
             list-style-type: none;
         }
@@ -21,33 +22,40 @@
             flex-grow: 1; /* Make the search bar grow to fill available space */
             max-width: 900px; /* Set a maximum width to prevent it from being too large on very wide screens */
         }
+       
         
     </style>
     {%include 'bootstrap.html'%}
 
 </head>
 <body class="lead">
-    <nav class="navbar fixed-top navbar-expand-sm ">
+    <nav class="navbar bg-dark navbar-expand-sm ">
         <div class="container-fluid">
-            <a class="navbar-brand text-center" style="color: white;"><b>Movie-Pro</b></a>
+            <a class="navbar-brand text-center" style="color: yellow;"><b>Movie-Pro</b></a>
             <form id="fid" class="d-flex search-bar space-before" action="{{ url_for('search') }}" method="GET">
-                <input name="query" class="form-control me-2" type="search" placeholder="Search for Movie/Actor/Year" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
+                <input id="search" name="query" class="form-control me-2" type="search" placeholder="Search for Movie/Actor/Year" aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Search</button>
             </form>
             
          
             <div class="row">
+                
                 <div class="col">
-                    <li id="li" class="lead" >Watchlist</li>
+                    <a href="#watchlist" id="logout" class="lead" style="color: yellow; font-size: 14px;">Watchlist</a>
+
              </div>
+            
             <div class="col">
-                <li id="li" class="lead" >Awards</li>
-            </div>
-            <div class="col">
-                <li id="li" class="lead" >Events</li>
+                <a href="#" id="logout" class="lead" style="color: yellow; font-size: 14px;">Events</a>
+
             </div>
            <div class="col">
-             <li id="li" class="lead" >Community</li>
+            <a  href="https://jkportfolio.onrender.com" target="_blank" id="logout" class="lead" style="color: yellow; font-size: 14px;">Developer</a>
+
+            </div>
+            <div class="col">
+                <a  href="{{url_for('logout')}}" id="logout" class="lead" style="color: yellow; font-size: 14px;">Logout</a>
+
             </div>
                 
                 

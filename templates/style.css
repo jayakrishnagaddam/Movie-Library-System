@@ -5,26 +5,22 @@
         border-bottom-left-radius: 2px;
         border-color: yellow;
     }
-
     .upgrade-items {
         border-left: 10px solid #ccc;
         border-color: red;
     }
-
     .upgrade-itemd {
         border-left: 8px solid #ccc;
         border-top-left-radius: 6px;
         border-bottom-left-radius: 6px;
         border-color: red;
     }
-
     .no-results {
         text-align: center;
         font-size: 1.5rem;
         color: #999;
         margin-top: 50px;
     }
-
     .search-results-heading {
         font-size: 2rem;
         font-weight: bold;
@@ -32,10 +28,10 @@
         text-align: center;
         color: white;
     }
-
     body {
         background-color: black !important;
-        margin-top: 60px !important;
+        margin-top:0% !important;
+        padding-top: 0%;
         color: white !important;
     }
 
@@ -65,10 +61,11 @@
     }
 
     .card-text {
-        color: wheat;
+        color: white;
         font-size: 15px;
         white-space: normal;
     }
+
 
     #aid {
         text-decoration: none;
